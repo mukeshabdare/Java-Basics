@@ -14,10 +14,8 @@ public class ComparableIMPL {
 		list.addAll(Arrays.asList(new Student(4,"A"), new Student(2,"b"),
 				new Student(1,"A")));
 		
-//		Collections.sort(list, () -> Student::id-);
-		
-		
-
+		Collections.sort(list, (s1, s2) -> (s1.getId()-s2.getId()));
+		list.forEach(System.out::println);
 	}
 
 }

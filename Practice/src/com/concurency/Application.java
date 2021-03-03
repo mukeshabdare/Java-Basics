@@ -11,12 +11,13 @@ public class Application {
 
 	/**
 	 * @param args
+	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		Task t1  = new Task("Thread : A");
 		t1.start();
-		
+		t1.join();
 		Task t2  = new Task("Thread : B");
 		t2.start();
 
